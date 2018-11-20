@@ -1,0 +1,56 @@
+h4{
+    color:royalblue;
+    font-size: 20px;
+    font-weight: 400;
+}
+mat-form-field{
+    /* border: 1px solid orange; */
+    /* height: 35px; */
+    width: 300px;
+    font-size: 14px;
+
+
+}
+.container{
+    font-family: 'Roboto', sans-serif;
+
+}
+#inputId, mat-error{
+    font-size: 14px;
+}
+label{
+    color: brown;
+    font-size: 15px;
+}
+th{
+    color: maroon;
+    font-weight: 300;
+}
+td{
+    color: black;
+}
+th,td,tr, table, tbody, thead{
+    border: 1px solid darkorchid;
+}
+td{
+    font-size: 12px;
+
+}
+#scrol{
+    overflow-x:auto;
+}
+
+.footer {
+    position: fixed;
+    font-size: 12px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    color: maroon;
+    text-align: center;
+ }
+ .example-button-row button,
+.example-button-row a {
+  margin-right: 8px;
+}

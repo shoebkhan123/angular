@@ -1,0 +1,96 @@
+<div class="container">
+  <br>
+  <h4 class="text-center">Get users information from Github by using user name</h4>
+  <hr>
+  <div class="row">
+      <div class="col-md-4">
+        
+      </div>
+      <div class="col-md-4">
+        <!-- <label>
+            User name: 
+        </label> -->
+       <form>
+          <div class="text-center">
+              <mat-form-field>
+                  <input matInput placeholder="Enter user name from github" [formControl]="name" [(ngModel)] = "userName" id="inputId" required>
+                  <mat-error *ngIf="name.invalid">{{getErrorMessageName()}}</mat-error>
+                </mat-form-field>
+          </div>
+            <br>
+            <!-- <input type="text" [(ngModel)] = "userName" class="form-control"> -->
+        
+          <div class="text-center">
+            <!-- <small class="text-danger" *ngIf = "showErrr">{{rrMsg}}</small> -->
+            <!-- <br> -->
+            <button mat-raised-button color="primary" (click) = "search()">Search</button>
+
+              <!-- <button  class="btn btn-primary">Search</button> -->
+            </div>      
+       </form>
+
+          
+      </div>
+      <div class="col-md-2">
+        
+      </div>
+
+     <div id="scrol" *ngIf = "show">
+        <br>
+        <br>
+        <table class="table table-hover">
+            <thead>
+              <tr>
+                  <th>login</th>
+                  <th>id</th>
+                  <th>url</th>
+                  <th>html_url</th>
+                  <th>type</th>
+                  <th>name</th>
+                  <th>company</th>
+                  <th>bio</th>
+                  <th>public_repos</th>
+                  <th>followers</th>
+                  <th>following</th>
+                  <th>
+                      created_at
+                  </th>
+                  <th>
+                      updated_at
+                  </th>
+    
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>{{res.login}}</td>
+                <td>{{res.id}}</td>
+                <td>{{res.url}}</td>
+                <td>{{res.html_url}}</td>
+                <td>{{res.type}}</td>
+                <td>{{res.name}}</td>
+                <td>{{res.company}}</td>
+                <td>{{res.bio}}</td>
+                <td>{{res.public_repos}}</td>
+                <td>{{res.followers}}</td>
+                <td>{{res.following}}</td>
+                <td>{{res.created_at}}</td>
+                <td>{{res.updated_at}}</td>
+              </tr>
+            </tbody>
+          </table>
+     </div>
+    </div>
+
+    <div class="footer">
+      <br>
+        <p>Created and developed <span></span> by <a href="https://www.linkedin.com/in/shoeb-khan-a50584158" target="_blank" title='Know more about me Linkedin'>Shoeb</a></p>
+      </div>
+      
+</div>
+
+
+
+
+
+

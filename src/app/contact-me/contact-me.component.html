@@ -1,0 +1,74 @@
+<mat-toolbar color = "primary">
+  
+  <button mat-button color = "accent" routerLink = "/">Home</button>
+  <button mat-button color = "accent" routerLink = "/about">about us</button>
+  <button mat-button color = "accent" routerLink = "/contact">Contact us</button>
+</mat-toolbar>
+
+
+<div class="container">
+    <br>
+        <h4 class="text-center">Contact me</h4>
+        
+<div class="text-center">
+
+        <small>i will be availabe for you all time</small><br>
+        <small>Reach me by <a href="mailTo:shoeb.1671@gmail.com" target="_top">shoeb.1671@gmail.com</a></small>
+</div>
+
+        <br>
+        
+        <div class="container">
+          <div class="row">
+        
+            <div class="col-md-4">
+              
+            </div>
+            <div class="col-md-4">
+                    <form (ngForm) = "form" (ngSubmit) = "send()">
+                            <mat-form-field>
+                                <input matInput placeholder="Enter your email" [formControl]="email" required>
+                                <mat-error *ngIf="email.invalid">{{getErrorMessageEmail()}}</mat-error>
+                              </mat-form-field>
+                              <br>
+                          <mat-form-field>
+                            <input matInput placeholder="Enter your name" [formControl]="name" required>
+                            <mat-error *ngIf="name.invalid">{{getErrorMessageName()}}</mat-error>
+                          </mat-form-field>
+                        <br>
+                          <mat-form-field>
+                            <input matInput placeholder="Age">
+                          </mat-form-field>
+                          <br>
+                          <mat-form-field>
+                                <textarea matInput placeholder="Message..." rows = "5"></textarea>
+                              </mat-form-field>
+                            <br>
+                          <!-- <mat-checkbox>Check me!</mat-checkbox> -->
+          <br><br>
+<div class="text-center">
+        <button mat-raised-button color="accent">Accent</button>
+
+</div>            
+          
+                        </form>
+        
+              </div>
+              <div class="col-md-">
+              
+                </div>
+            <!-- <div class="col-md-12">
+                
+        
+            </div>
+            <div class="col-md-12">
+                
+            <div class="col-md-4">
+               
+            </div>
+            <div class="col-md-6">
+        
+            </div> -->
+          </div>
+        </div>
+</div>

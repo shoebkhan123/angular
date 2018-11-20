@@ -1,0 +1,106 @@
+<!-- <app-root></app-root>
+
+<mat-drawer-container class="example-container" >
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+      <p>Auto-resizing sidenav</p>
+      <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+      <button (click)="showFiller = !showFiller" mat-raised-button>
+        Toggle extra text
+      </button>
+    </mat-drawer>
+  
+    <div class="example-sidenav-content">
+      <button type="button" mat-button (click)="drawer.toggle()">
+        Toggle sidenav
+      </button>
+      ewrtdegsh
+      tewtkiy
+      rASTYDHFJ
+      SATSDYHFJGKHL
+
+    </div>
+  
+  </mat-drawer-container> -->
+
+  <mat-toolbar color="warn">
+    <mat-toolbar-row style="position:fixed-top;">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" color="primary">
+        <mat-icon aria-label="Side nav toggle icon" style="color:white; font-size:20px;">
+          
+            <i class="fas fa-bars"></i>
+        </mat-icon>
+      </button>
+      <span><img src=""></span>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <mat-sidenav-container class="example-container">
+    
+    <mat-sidenav #drawer mode="side" opened role="navigation">
+      <mat-nav-list>
+        <a mat-list-item routerLink='/table' style="font-size:12px;">First Component</a>
+        <a mat-list-item routerLink='/second'>Second Component</a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div class="container"> 
+        <div class="text-center" align = "center">
+          <h4>Welcome to home page</h4>
+          <mat-accordion>
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Personal data
+                </mat-panel-title>
+                <mat-panel-description>
+                  Type your name and age
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+          
+              <form ngForm = "form" (ngSubmit) = "send()">
+                  <mat-form-field>
+                      <input matInput  placeholder="Enter your email" [formControl]="email" required>
+                      <mat-error *ngIf="email.invalid">{{getErrorMessageEmail()}}</mat-error>
+                    </mat-form-field>
+                    <br>
+                <mat-form-field>
+                  <input matInput placeholder="Enter your name" [formControl]="name" required>
+                  <mat-error *ngIf="name.invalid">{{getErrorMessageName()}}</mat-error>
+                </mat-form-field>
+              <br>
+                <mat-form-field>
+                  <input matInput placeholder="Age">
+                </mat-form-field>
+                <br>
+                <mat-checkbox>Check me!</mat-checkbox>
+<br><br>
+                <button mat-raised-button color="accent">Accent</button>
+  
+
+              </form>
+            </mat-expansion-panel>
+            <!-- (opened)="panelOpenState = true"
+            (closed)="panelOpenState = false" -->
+            <mat-expansion-panel 
+            
+            
+            
+            
+            
+            
+            
+          
+                                 >
+              <mat-expansion-panel-header>
+              
+                <mat-panel-description style="text-align:left;">
+                  <!-- Currently I am {{panelOpenState ? 'open' : 'closed'}} -->
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+              <p>I'm visible because I am open</p>
+            </mat-expansion-panel>
+          </mat-accordion>
+         
+        </div>
+      </div>
+   
+  
